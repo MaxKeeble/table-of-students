@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Панель управления студентами</title>
+  <link rel="stylesheet" href="/css/normolize.css">
+  <link rel="stylesheet" href="/css/bootstrap-grid.min.css">
+
+  <link rel="stylesheet" href="/css/style.css">
+  <script defer src="/scripts/script.js"></script>
+</head>
+
+<body>
+
+  <section class="section section-students">
+    <div class="container">
+      <div class="students">
+
+        <h1 class="students__heading">Панель управления студентами</h1>
+
+        <fieldset class="filter">
+          <legend class="filter__legend">Фильтры:</legend>
+          <div class="filter__item">
+            <label class="filter__label" for="legend-name">ФИО</label>
+            <input type="text" class="filter__input" name="name" id="legend-name"
+              placeholder="Киркоров Филипп Бедросович">
+          </div>
+          <div class="filter__item">
+            <label class="filter__label" for="faculty">Факультет</label>
+            <input type="text" class="filter__input" name="faculty" id="faculty" placeholder="Музыкальной комедии">
+          </div>
+          <div class="filter__item">
+            <label class="filter__label" for="start-training">Год начала обучения</label>
+            <input type="number" class="filter__input" name="start-training" id="start-training" min="2000"
+              placeholder="2000">
+          </div>
+          <div class="filter__item">
+            <label class="filter__label" for="finish-training">Год окончания обучения</label>
+            <input type="number" class="filter__input" name="finish-training" id="finish-training" placeholder="2004">
+          </div>
+        </fieldset>
+
+        <ul class="students__list" id="students__list">
+          <li class="row students__item students__list_heading">
+            <div class="col-3 hat name">ФИО</div>
+            <div class="col-3 hat faculty">Факультет</div>
+            <div class="col-3 hat date-of-birth">Дата рождения и возраст</div>
+            <div class="col-3 hat years-of-education">Годы обучения и курс</div>
+          </li>
+          <li class="row students__item student">
+            <div class="col-3 student_name">Иванов Тимофей Олегович</div>
+            <div class="col-3 student_faculty">Инженерный</div>
+            <div class="col-3 student_date-of-birth">02.03.1988 (33 года)</div>
+            <div class="col-3 student_years-of-education">2019-2023 (2 курс)</div>
+          </li>
+          <li class="row students__item student">
+            <div class="col-3 student_name">Петров Петр Петрович</div>
+            <div class="col-3 student_faculty">Экономический</div>
+            <div class="col-3 student_date-of-birth">27.02.1990 (31 год)</div>
+            <div class="col-3 student_years-of-education">2017-2021 (4 курс)</div>
+          </li>
+          <li class="row students__item student">
+            <div class="col-3 student_name">Сидоров Сидор Сидорович</div>
+            <div class="col-3 student_faculty">Инженерный</div>
+            <div class="col-3 student_date-of-birth">01.01.2000 (21 год)</div>
+            <div class="col-3 student_years-of-education">2017-2021 (4 курс)</div>
+          </li>
+          <li class="row students__item student">
+            <div class="col-3 student_name">Иванов Иван Иванович</div>
+            <div class="col-3 student_faculty">Экономический</div>
+            <div class="col-3 student_date-of-birth">31.12.1999 (21 год)</div>
+            <div class="col-3 student_years-of-education">2019-2023 (4 курс)</div>
+          </li>
+        </ul>
+
+        <form action="#" method="post" class="form">
+
+          <a href="#form-surname" class="button">К форме для студента</a>
+
+          <fieldset class="form__fieldset">
+            <legend class="form__legend">Форма для студента</legend>
+
+            <div class="part-of-form part-of-form_surname">
+              <label class="form__label" for="form-surname">Фамилия</label>
+              <input type="text" class="form__input" name="name" id="form-surname" placeholder="Киркоров">
+            </div>
+            <div class="part-of-form part-of-form_name">
+              <label class="form__label" for="form-name">Имя</label>
+              <input type="text" class="form__input" name="name" id="form-name" placeholder="Филипп">
+            </div>
+            <div class="part-of-form part-of-form_middle-name">
+              <label class="form__label" for="form-middle_name">Отчество</label>
+              <input type="text" class="form__input" name="name" id="form-middle_name" placeholder="Бедросович">
+            </div>
+            <div class="part-of-form part-of-form_date-of-birth">
+              <label class="form__label" for="form-date-of-birth">Дата рождения</label>
+              <input type="date" class="form__input" name="name" id="form-date-of-birth">
+            </div>
+            <div class="part-of-form part-of-form_start-date">
+              <label class="form__label" for="form-start-date">Год начала обучения</label>
+              <input type="number" class="form__input" name="name" id="form-start-date" placeholder="2000" min="2000">
+            </div>
+            <div class="part-of-form part-of-form_faculty">
+              <label class="form__label" for="form-faculty">Факультет</label>
+              <input type="text" class="form__input" name="name" id="form-faculty" placeholder="Музыкальной комедии">
+            </div>
+
+            <input type="submit" value="Добавить студента" class="form__button" id="form__button">
+
+          </fieldset>
+
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+</body>
+
+</html>
